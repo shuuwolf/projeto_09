@@ -44,23 +44,59 @@ header .logo{
     background-size:100% 100%;
 }
 
-header nav{
+header nav.desktop{
     float: left;
     padding-left: 60px;
 }
 
-header nav ul{
+nav.mobile{
+    display: none;
+}
+
+header nav.mobile{
+    float: right;
+    margin-right: 10px;
+}
+
+nav.mobile h3{
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+ul.nav-mobile{
+    position: absolute;
+    left: 0;
+    top: 70px;
+    width: 100%;
+    background: #6CC5B2;
+    display: none;
     list-style-type: none;
 }
 
-header nav ul li{
+ul.nav-mobile li{
+    padding: 9px 0;
+    border-bottom:1px solid white;
+    text-align: center;
+    width: 100%;
+}
+
+ul.nav-mobile li a{
+    color: white;
+}
+
+header nav.desktop ul{
+    list-style-type: none;
+}
+
+header nav.desktop ul li{
     padding: 0 15px;
     display: inline-block;
     font-size: 16px;
     color: white;
 }
 
-header nav ul li a{
+header nav.desktop ul li a{
     text-decoration: none;
     color: inherit;
 }
@@ -451,6 +487,12 @@ section.contato input[type=submit]{
     font-size: 30px;
 }
 
+footer{
+    padding: 20px 0;
+    background: #6CC5B2;;
+    text-align: center;
+}
+
 @media screen and (max-width: 1024px){
     .etapas__single{
         width: 100%;
@@ -531,6 +573,14 @@ section.contato input[type=submit]{
 
     section.depoimento{
         top: 0;
+    }
+
+    nav.desktop{
+        display: none;
+    }
+
+    nav.mobile{
+        display: block;
     }
 }
 
